@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function vo {
+	tmp=$(find $1 -type f | fzf -m)
+	[ -n "$tmp" ] && $EDITOR -p $tmp
+}
+
+function agent {
+	eval $(ssh-agent)
+	ssh-add $1
+
+	shift 1
+
+	for arg
+	do
+		git $arg
+	done
+}

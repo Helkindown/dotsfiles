@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#Just the specifics for my laptop
+alias wifi="nmtui"

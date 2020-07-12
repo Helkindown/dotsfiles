@@ -1,0 +1,35 @@
+# If not running interactively, exit
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+LESSHISTFILE=/dev/null
+
+PS1="\[\e[38;5;99m\]\u\[\e[0m\]@\[\e[38;5;197m\]\h\[\e[0m\]:[\[\e[38;5;156m\]\W\[\e[0m\]]> "
+
+PS1="\[\e]0;\w\a\]$PS1"
+
+# Remove the need to type cd
+shopt -s autocd
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# Remove the <C-s> shortcut that stop input
+stty -ixon
+
+# And same with <C-q> shortcut that resume input
+stty -ixoff
+
+for src in $(find $HOME/.config/bash/ -type f)
+do
+	source $src
+done

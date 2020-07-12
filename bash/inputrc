@@ -1,0 +1,16 @@
+
+set colored-stats on
+set completion-ignore-case on
+set completion-prefix-display-length 6
+set editing-mode vi
+#set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set skip-completed-text on
+
+# When pressing up or down arrow, show only history that
+# matches what was already typed
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# When "é" is typed, it type "~" instead
+"é": "~"

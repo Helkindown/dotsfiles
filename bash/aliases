@@ -1,0 +1,32 @@
+#!/bin/sh
+
+alias cp='cp -iv'
+alias cpf='cp -vf'
+
+alias e='$EDITOR'
+
+alias grep='grep -i --color=auto'
+
+alias ls='ls -NF --color=auto --group-directories-first'
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -lh'
+
+alias ln='ln -vf'
+
+alias mv='mv -vf'
+
+alias pwd='pwd -P'	# Show the physical link instead of the symbolic one
+
+alias rm='rm -v'
+alias rmrf='rm -vrf'
+
+alias rmdir='rmdir -v'
+
+alias x='x-terminal-emulator -d "$(pwd)" & disown'
+
+alias :q='exit'
+
+alias à='cd -'
+alias ..='cd ..'
+alias ¤='cd ~/Doc/dotsfiles'

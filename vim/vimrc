@@ -1,0 +1,77 @@
+" Most of the stuff was fount on https://github.com/Chewie/dotfiles/blob/master/vim/.vimrc
+" Go take a look, it's very well made, compared to my half made vimrc that I
+" still didn't finish
+
+set nocompatible	" Force Vim to use Vim mode, and not vi compatible mode
+filetype plugin on	" Used to determine what file type we edit
+set encoding=utf8	" Force utf-8 encoding
+set showcmd		" Show commands in the bottom right corner
+set autoread		" Reload automatically the file if it was changed outside of Vim
+set autowriteall	" Write automatically because I always forget to do it
+set autoindent		" Vim will auto indent text
+set smartindent
+set nohlsearch		" no highlight all the searched terms
+set ignorecase
+set smartcase		" And will ignore the case or not from context
+set wildmenu		" Pretty file explorer
+
+" Set a relative number display on the left and highlight the current line,
+" with a minimum scroll off of five lines
+set number
+set relativenumber	
+set cursorline
+set scrolloff=5
+
+" Syntax coloring and theme
+syntax on
+colorscheme monokai
+
+" show trailing characters
+set list
+set listchars=""
+set listchars+=trail:.
+set listchars+=tab:\ \ 
+
+" set the behaviour of backspace to be more universal
+set backspace=eol,indent,start
+
+" add French and English spell check
+set spell
+set spelllang=en,fr
+
+" Set the default clipboard to "+
+set clipboard=unnamedplus
+
+" Status line :
+set laststatus=2	"Always show the status bar
+
+" Key bindings :
+
+" Quick find and replace in normal mode
+nmap <C-s> :%s/
+
+" Map à to 0 in normal, visual and movement waiting command mode
+map à 0
+
+" Map é to ~ in normal, visual and movement waiting command mode
+map é ~
+
+" Quick toggle between spell and nospell
+map µ :set spell!<CR>
+
+" Quick binding to use the macro stored in a
+map ù @a
+
+" Map to make arrow keys resize the windows
+map <Up> :resize +5<CR>
+map <Down> :resize -5<CR>
+map <Left> :vertical resize -5<CR>
+map <Right> :vertical resize +5<CR>
+
+" Make moving around blocks of texts in visual line mode more convenient
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
+
+
+" Map for latex :
+autocmd FileType tex map ç :! pdflatex %<CR><CR>
