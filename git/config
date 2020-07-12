@@ -1,3 +1,5 @@
 [user]
 	email = Helkindown@protonmail.com
 	name = Helkindown
+[pull]
+	rebase = false
