@@ -45,13 +45,13 @@ bindsym --release $mod+Shift+Left move left
 bindsym --release $mod+Shift+Down move down
 bindsym --release $mod+Shift+Up move up
 bindsym --release $mod+Shift+Right move right
-         
+
 # enter  fullscreen mode for the focused container
 bindsym --release $mod+f fullscreen toggle
-         
+
 # toggle  tiling / floating
 bindsym --release $mod+Shift+F floating toggle
-         
+
 # Focus the urgent windows
 bindsym --release $mod+x [urgent=latest] focus
 
@@ -86,6 +86,16 @@ bindsym --release $mod+Shift+Z move container to workspace $ws6
 bindsym --release $mod+Shift+E move container to workspace $ws7
 bindsym --release $mod+Shift+R move container to workspace $ws8
 
+# Move the windows to the workspace & you
+bindsym --release $mod+$alt+ampersand move container to workspace $ws1 ; workspace $ws1
+bindsym --release $mod+$alt+eacute move container to workspace $ws2 ; workspace $ws2
+bindsym --release $mod+$alt+quotedbl move container to workspace $ws3 ; workspace $ws3
+bindsym --release $mod+$alt+apostrophe move container to workspace $ws4 ; workspace $ws4
+bindsym --release $mod+$alt+a move container to workspace $ws5 ; workspace $ws5
+bindsym --release $mod+$alt+z move container to workspace $ws6 ; workspace $ws6
+bindsym --release $mod+$alt+e move container to workspace $ws7 ; workspace $ws7
+bindsym --release $mod+$alt+r move container to workspace $ws8 ; workspace $ws8
+
 # reload the configuration file
 bindsym $mod+$ctrl+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -113,6 +123,9 @@ bindsym $mod+$alt+Right	resize grow width 10 px or 10 ppt
 bindsym --release $mod+Tab workspace next
 bindsym --release $mod+Shift+Tab workspace prev
 
+## Navigate next/previous workspace with the current window
+bindsym --release $mod+$alt+Tab move container to workspace next ; workspace next
+bindsym --release $mod+$alt+Shift+Tab move container to workspace prev ; workspace prev
 
 ## Choose split direction
 bindsym --release $mod+BackSpace split toggle
