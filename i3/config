@@ -137,7 +137,7 @@ bindsym --release $mod+$ctrl+s		exec --no-startup-id "$Locker ; systemctl suspen
 bindsym --release XF86Calculator	exec --no-startup-id "$Locker"
 
 bindsym --release $mod+Shift+Return	exec	firefox
-bindsym --release $mod+c		exec	$terminal -x cmus
+#bindsym --release $mod+c		exec	$terminal -x cmus
 bindsym --release $mod+d		exec	discord
 bindsym --release $mod+n		exec	$terminal -x newsboat
 bindsym --release $mod+p		exec	$fileManager
