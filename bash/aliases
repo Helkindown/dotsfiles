@@ -1,5 +1,8 @@
 #!/bin/sh
 
+alias mount='mount -v'
+alias umount='umount -v'
+
 alias cp='cp -iv'
 alias cpf='cp -vf'
 
