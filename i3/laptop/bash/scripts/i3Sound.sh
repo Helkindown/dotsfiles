@@ -1,16 +1,17 @@
-#!/bin/bash
+#!/bin/sh
 
 case $BLOCK_BUTTON in
 	1) 
-		pavucontrol & disown
+		pavucontrol &
 esac
 
-tmp="$(pactl list sinks | tee >(awk '/^\t*Volume:/ {print $5}') >(awk '/^\t*Mute:/ {print $2}') > /dev/null)"
+tmp="$(amixer sget Master | awk '/^ *Front L/ {print $5 ":"  $6}')"
 
-if [ "$(echo $tmp | cut -d\  -f1)" = "no" ]
+if [ "$(echo $tmp | cut -d: -f2)" = "[on]" ]
 then
-	tmp=$(echo $tmp | cut -d\  -f2)
-	tmp=${tmp%\%}
+	tmp=$(echo $tmp | cut -d: -f1)
+	tmp=${tmp%\%]}
+	tmp=${tmp#[}
 
 	if [ $tmp -gt 50 ]
 	then
