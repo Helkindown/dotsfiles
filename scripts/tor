@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd $HOME/Doc/tor/
+cd $HOME/Work/tor/
 ./start
