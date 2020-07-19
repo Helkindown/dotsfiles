@@ -36,7 +36,7 @@ set listchars+=tab:\ \
 set backspace=eol,indent,start
 
 " add French and English spell check
-set spell
+set nospell
 set spelllang=en,fr
 
 " Set the default clipboard to "+
