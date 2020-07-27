@@ -127,6 +127,9 @@ bindsym --release $mod+Shift+Tab workspace prev
 bindsym --release $mod+$alt+Tab move container to workspace next ; workspace next
 bindsym --release $mod+$alt+Shift+Tab move container to workspace prev ; workspace prev
 
+# Change focus between tiling / floating windows
+bindsym $mod+m focus mode_toggle
+
 ## Choose split direction
 bindsym --release $mod+BackSpace split toggle
 
