@@ -3,7 +3,7 @@
 if which which > /dev/null
 then
 
-	for amixer awk bash bc cut df echo elem expr free fzf git i3 i3blocks in mpstat newsboat pavucontrol picom scrot sensors xclip xwallpaper
+	for elem in amixer awk bash bc cut df echo expr free fzf git i3 i3blocks mpstat newsboat pavucontrol picom scrot sensors xclip xwallpaper
 	do
 		which $elem &> /dev/null || res="$res\n\t-$elem"
 	done
