@@ -11,7 +11,7 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [ -d  "$HOME/.config/bash" ] || mkdir "$HOME/.config/bash"
 [ -d  "$HOME/bin" ] || mkdir "$HOME/bin"
 
-if which i3 > /dev/null	# If i3 is installed, we update the ~/.config/i3 and ~/.config/i3blocks directory
+if which i3 2> /dev/null	# If i3 is installed, we update the ~/.config/i3 and ~/.config/i3blocks directory
 then
 	echo updating i3...
 
@@ -23,8 +23,8 @@ then
 	# Set up the compton configuration file
 	ln -f "$BASEDIR/i3/compton.conf" "$HOME/.config"
 
-	if which xbacklight > /dev/null	# If the xbacklight utilities is installed,
-	then				# we presume we need the laptop version
+	if which xbacklight 2> /dev/null	# If the xbacklight utilities is installed,
+	then					# we presume we need the laptop version
 		echo Using laptop i3 config...
 		ORIGINDIR="$BASEDIR/i3/laptop"	
 	else
@@ -44,6 +44,12 @@ then
 	ln -f $ORIGINDIR/bash/src/*	"$HOME/.config/bash"
 else
 	echo i3 not detected, skipping...
+fi
+
+if which kitty &> /dev/null
+then
+	[ -d "$HOME/.config/kitty" ] || mkdir $HOME/.config/kitty
+	ln -f $ORIGINDIR/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
 fi
 
 # Link all the base dotfiles to either their base dir or
