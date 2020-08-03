@@ -1,8 +1,5 @@
 #!/bin/sh
 
-alias mount='mount -v'
-alias umount='umount -v'
-
 alias cp='cp -iv'
 alias cpf='cp -vf'
 
@@ -10,26 +7,30 @@ alias e='$EDITOR'
 
 alias grep='grep -i --color=auto'
 
-alias ls='ls -NF --color=auto --group-directories-first'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -lh'
-
 alias ln='ln -vf'
+alias ls='ls -NF --color=auto --group-directories-first'
+
+alias mkdir='mkdir -v'
 
 alias mv='mv -vf'
 
-alias pwd='pwd -P'	# Show the physical link instead of the symbolic one
+alias p='sudo pacman'
 
+alias pwd='pwd -P'	# Show the physical link instead of the symbolic one
 alias rm='rm -v'
+alias rmdir='rmdir -v'
 alias rmrf='rm -vrf'
 
-alias rmdir='rmdir -v'
+alias mount='sudo mount -v'
+alias umount='sudo umount -v'
 
 alias x='x-terminal-emulator -d "$(pwd)" & disown'
 
+alias ..='cd ..'
 alias :q='exit'
 
-alias à='cd -'
-alias ..='cd ..'
 alias ¤='cd ~/Doc/dotsfiles'
+alias à='cd -'
