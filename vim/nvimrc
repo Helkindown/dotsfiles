@@ -1,5 +1,5 @@
 " For neovim, remap Esc to exit terminal mode
-tnoremap <Esc> <C-\><C-n>
+tnoremap è <C-\><C-n>
 
 " Set the normal vimrc with only Vim compatible command
 source ~/.config/nvim/vimrc
