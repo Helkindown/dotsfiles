@@ -9,7 +9,7 @@ set $ctrl Control
 set $wallpaper "$HOME/bin/scripts/i3Wallpaper.sh"
 
 set $fileManager pcmanfm
-set $terminal kitty
+set $terminal termite
 
 set $light_purple	"#705BB5"
 set $purple		"#563EA1"
@@ -183,8 +183,8 @@ bindsym --release $mod+b exec xrandr -r $(echo "60\n144" | dmenu -i -b -fn hack 
 bindsym --release $mod+q layout toggle tabbed split
 
 ## Takes screenshots, with a rectangle selection with the $mod
-bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/Pictures/Screenshot'
-bindsym --release $mod+Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h.png' -se 'mv $f ~/Pictures/Screenshot'
+bindsym --release $mod+Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/Screenshot'
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M.png' -se 'mv $f ~/Pictures/Screenshot'
 
 ## Automatically mouves the discord & jami to the last workplace
 for_window [class="discord"] move container to workspace $ws8
@@ -215,3 +215,4 @@ exec --no-startup-id xset r rate 200 40
 
 exec --no-startup-id $wallpaper
 exec --no-startup-id picom
+
