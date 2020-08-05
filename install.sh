@@ -81,6 +81,7 @@ then
 else
 	VIMDIR=""
 	echo vim nor neovim is installed, not updating their config files
+fi
 
 if [ -n $VIMDIR ] 
 then
