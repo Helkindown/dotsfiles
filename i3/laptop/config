@@ -9,7 +9,7 @@ set $ctrl Control
 set $wallpaper "$HOME/bin/scripts/i3Wallpaper.sh"
 
 set $fileManager pcmanfm
-set $terminal kitty
+set $terminal termite
 
 set $light_purple	"#705BB5"
 set $purple		"#563EA1"

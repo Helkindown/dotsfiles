@@ -47,11 +47,11 @@ else
 	echo i3 not detected...
 fi
 
-if which kitty &> /dev/null
+if which termite &> /dev/null
 then
-	echo Updating kitty...
-	[ -d "$HOME/.config/kitty" ] || mkdir $HOME/.config/kitty
-	ln -f $BASEDIR/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+	echo Updating termite...
+	[ -d "$HOME/.config/termite" ] || mkdir $HOME/.config/termite
+	ln -f $BASEDIR/termite/config $HOME/.config/termite/config
 fi
 
 # Link all the base dotfiles to either their base dir or
