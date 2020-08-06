@@ -177,9 +177,6 @@ bindsym --release $mod+Shift+M exec --no-startup-id $wallpaper
 bindsym --release $mod+space exec dmenu_run -i -b -fn hack -sb $purple
 ### If dmenu don't show any programs, just delete either ~/.dmenu_cache or ~/.cache/dmenu_run
 
-## Change the fps of the screen
-bindsym --release $mod+b exec xrandr -r $(echo "60\n144" | dmenu -i -b -fn hack -sb $purple)
-
 ## Window Layout Mode
 bindsym --release $mod+q layout toggle tabbed split
 
@@ -209,6 +206,9 @@ bar {
 client.focused		$purple		$light_purple	$text		"#E9CE47"
 
 # Exec :
+## Change the fps of the screen
+exec --no-startup-id xrandr -r 144
+
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape
 ## Change the repeat speed for key repeat
