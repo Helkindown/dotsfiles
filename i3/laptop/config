@@ -105,14 +105,14 @@ bindsym $mod+$ctrl+r restart
 bindsym $mod+$ctrl+e exec i3-msg exit
 
 # Resize stuff :
-bindsym $mod+y		resize shrink width 10 px or 10 ppt
-bindsym $mod+u		resize grow height 10 px or 10 ppt
-bindsym $mod+i		resize shrink height 10 px or 10 ppt
-bindsym $mod+o		resize grow width 10 px or 10 ppt
-bindsym $mod+Shift+Y	resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+U	resize grow height 10 px or 10 ppt
-bindsym $mod+Shift+I	resize shrink height 10 px or 10 ppt
-bindsym $mod+Shift+O	resize grow width 10 px or 10 ppt
+bindsym $mod+y		resize shrink width 1 px or 1 ppt
+bindsym $mod+u		resize grow height 1 px or 1 ppt
+bindsym $mod+i		resize shrink height 1 px or 1 ppt
+bindsym $mod+o		resize grow width 1 px or 1 ppt
+bindsym $mod+Shift+Y	resize shrink width 1 px or 1 ppt
+bindsym $mod+Shift+U	resize grow height 1 px or 1 ppt
+bindsym $mod+Shift+I	resize shrink height 1 px or 1 ppt
+bindsym $mod+Shift+O	resize grow width 1 px or 1 ppt
 
 #Same for the arrows keys :
 bindsym $mod+$alt+Left	resize shrink width 10 px or 10 ppt
