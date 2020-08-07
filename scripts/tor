@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd $HOME/Work/tor/
-./start
+./start-tor-browser.desktop &
