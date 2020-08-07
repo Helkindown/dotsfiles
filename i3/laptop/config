@@ -177,17 +177,14 @@ bindsym --release $mod+Shift+M exec --no-startup-id $wallpaper
 bindsym --release $mod+space exec dmenu_run -i -b -fn hack -sb $purple
 ### If dmenu don't show any programs, just delete either ~/.dmenu_cache or ~/.cache/dmenu_run
 
-### Change the fps of the screen
-#bindsym --release $mod+b exec xrandr -r $(echo "60\n144" | dmenu -i -b -fn hack -sb $purple)
-
 ## Window Layout Mode
 bindsym --release $mod+q layout toggle tabbed split
 
 ## Takes screenshots, with a rectangle selection with the $mod
-bindsym --release $mod+Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -e 'mv $f ~/Pictures/Screenshot'
-bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M.png' -se 'mv $f ~/Pictures/Screenshot'
+bindsym --release $mod+Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M.png' -e 'mv $f ~/Pictures/Screenshot'
+bindsym --release Print exec --no-startup-id scrot '%Y-%m-%d_%H:%M_$wx$h.png' -se 'mv $f ~/Pictures/Screenshot'
 
-## Automatically mouves the discord & jami to the last workplace
+## Automatically moves the discord & jami to the last workplace
 for_window [class="discord"] move container to workspace $ws8
 for_window [class="Jami-gnome"] move container to workspace $ws8
 
@@ -209,6 +206,10 @@ bar {
 client.focused		$purple		$light_purple	$text		"#E9CE47"
 
 # Exec :
+
+### Change the fps of the screen
+#exec --no-startup-id xrandr -r 144
+
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape
 ## Change the repeat speed for key repeat
