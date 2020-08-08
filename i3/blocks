@@ -29,5 +29,5 @@ command=$HOME/bin/scripts/i3Temp.sh
 interval=60
 
 [Date]
-command=date +%d/%m/%y__%H:%M_
+command=date +%A_%d/%m/%y__%H:%M_
 interval=60
