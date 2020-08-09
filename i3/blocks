@@ -4,27 +4,33 @@ signal=10
 interval=once
 
 [Free Memory]
-label=Free
+label=Free 
 command=$HOME/bin/scripts/i3Free.sh
 interval=once
 
+#[Brightness]
+#label=Bri 
+#command=$HOME/bin/scripts/i3Brightness.sh
+#signal=11
+#interval=once
+
 #[Battery]
-#label=Bat
-#command=i3Battery.sh
+#label=Bat 
+command=$HOME/bin/scripts/i3Battery.sh
 #interval=60
 
 [CPU]
-label=Cpu
+label=Cpu 
 command=$HOME/bin/scripts/i3Cpu.sh
 interval=60
 
 [Memory]
-label=Mem
+label=Mem 
 command=$HOME/bin/scripts/i3Mem.sh
 interval=60
 
 [Temperature]
-label=Temp
+label=Temp 
 command=$HOME/bin/scripts/i3Temp.sh
 interval=60
 
