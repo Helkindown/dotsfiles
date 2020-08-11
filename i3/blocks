@@ -16,7 +16,7 @@ interval=once
 
 #[Battery]
 #label=Bat 
-command=$HOME/bin/scripts/i3Battery.sh
+#command=$HOME/bin/scripts/i3Battery.sh
 #interval=60
 
 [CPU]
@@ -35,5 +35,5 @@ command=$HOME/bin/scripts/i3Temp.sh
 interval=60
 
 [Date]
-command=date +%A_%d/%m/%y__%H:%M_
+command=date +%A\ %d/%m/%y\ \ %H:%M\ 
 interval=60
