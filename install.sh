@@ -19,8 +19,8 @@ then
 	[ -d "$HOME/.config/i3" ] || mkdir "$HOME/.config/i3"
 	[ -d "$HOME/.config/i3blocks" ] || mkdir "$HOME/.config/i3blocks"
 
-	# Set up the compton configuration file
-	ln -f "$BASEDIR/i3/compton.conf"	"$HOME/.config"
+	# Set up the picom configuration file
+	ln -f "$BASEDIR/i3/picom.conf"	"$HOME/.config"
 
 	# Update the xserverrc & xinitrc because configuring this is always a headache
 	ln -f "$BASEDIR/i3/X11/xserverrc"	"$HOME/.xserverrc"
