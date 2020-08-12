@@ -42,10 +42,10 @@ bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym --release $mod+Shift+Left move left
-bindsym --release $mod+Shift+Down move down
-bindsym --release $mod+Shift+Up move up
-bindsym --release $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # enter  fullscreen mode for the focused container
 bindsym --release $mod+f fullscreen toggle
@@ -132,7 +132,8 @@ bindsym --release $mod+$alt+Shift+Tab move container to workspace prev ; workspa
 bindsym $mod+m focus mode_toggle
 
 ## Choose split direction
-bindsym --release $mod+BackSpace split toggle
+bindsym --release $mod+BackSpace	split toggle
+bindsym --release $mod+s		split toggle
 
 ## Hibernate & Suspend & lock :
 bindsym --release $mod+$ctrl+p		exec --no-startup-id "systemctl poweroff"
