@@ -87,7 +87,7 @@ else
 	echo vim nor neovim is installed, not updating their config files
 fi
 
-if [ -n $VIMDIR ] 
+if [ -n "$VIMDIR" ] 
 then
 
 	[ -d $VIMDIR/colors ] || mkdir $VIMDIR/colors
