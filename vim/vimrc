@@ -49,6 +49,8 @@ set laststatus=2	"Always show the status bar
 
 " Quick find and replace in normal mode
 nmap <C-s> :%s/
+" Same thing for the visual mode
+vmap <C-s> :s/
 
 " Map à to 0 in normal, visual and movement waiting command mode
 map à 0
