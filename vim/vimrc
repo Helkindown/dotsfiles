@@ -1,6 +1,6 @@
 " Most of the stuff was fount on https://github.com/Chewie/dotfiles/blob/master/vim/.vimrc
-" Go take a look, it's very well made, compared to my half made vimrc that I
-" still didn't finish
+" Keep in mind that this configuration is made for an AZERTY keyboard,
+" it wouldn't make sense to use it on an another kind of keyboard.
 
 set nocompatible	" Force Vim to use Vim mode, and not vi compatible mode
 filetype plugin on	" Used to determine what file type we edit
