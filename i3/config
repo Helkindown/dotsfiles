@@ -18,6 +18,8 @@ set $text		"#FFFFFF"
 
 set $Locker i3lock -efc 563EA1 && sleep 1
 
+set $alt_mode Alt mode
+
 font pango:hack 8
 
 floating_modifier $mod
@@ -87,16 +89,6 @@ bindsym --release $mod+Shift+Z move container to workspace $ws6
 bindsym --release $mod+Shift+E move container to workspace $ws7
 bindsym --release $mod+Shift+R move container to workspace $ws8
 
-# Move the windows to the workspace & you
-bindsym --release $mod+$alt+ampersand move container to workspace $ws1 ; workspace $ws1
-bindsym --release $mod+$alt+eacute move container to workspace $ws2 ; workspace $ws2
-bindsym --release $mod+$alt+quotedbl move container to workspace $ws3 ; workspace $ws3
-bindsym --release $mod+$alt+apostrophe move container to workspace $ws4 ; workspace $ws4
-bindsym --release $mod+$alt+a move container to workspace $ws5 ; workspace $ws5
-bindsym --release $mod+$alt+z move container to workspace $ws6 ; workspace $ws6
-bindsym --release $mod+$alt+e move container to workspace $ws7 ; workspace $ws7
-bindsym --release $mod+$alt+r move container to workspace $ws8 ; workspace $ws8
-
 # reload the configuration file
 bindsym $mod+$ctrl+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -114,19 +106,9 @@ bindsym $mod+Shift+U	resize grow height 1 px or 1 ppt
 bindsym $mod+Shift+I	resize shrink height 1 px or 1 ppt
 bindsym $mod+Shift+O	resize grow width 1 px or 1 ppt
 
-#Same for the arrows keys :
-bindsym $mod+$alt+Left	resize shrink width 10 px or 10 ppt
-bindsym $mod+$alt+Down	resize grow height 10 px or 10 ppt
-bindsym $mod+$alt+Up	resize shrink height 10 px or 10 ppt
-bindsym $mod+$alt+Right	resize grow width 10 px or 10 ppt
-
 ## Navigate next/previous workspace
 bindsym --release $mod+Tab workspace next
 bindsym --release $mod+Shift+Tab workspace prev
-
-## Navigate next/previous workspace with the current window
-bindsym --release $mod+$alt+Tab move container to workspace next ; workspace next
-bindsym --release $mod+$alt+Shift+Tab move container to workspace prev ; workspace prev
 
 # Change focus between tiling / floating windows
 bindsym $mod+m focus mode_toggle
@@ -208,6 +190,31 @@ bar {
 ## Window Border color
 # class			border		background	text		indicator		child_border
 client.focused		$purple		$light_purple	$text		"#E9CE47"
+
+bindsym $alt+space mode "$alt_mode"
+mode "$alt_mode" {
+# Move the windows to the workspace & you
+	bindsym --release ampersand move container to workspace $ws1 ; workspace $ws1
+	bindsym --release eacute move container to workspace $ws2 ; workspace $ws2
+	bindsym --release quotedbl move container to workspace $ws3 ; workspace $ws3
+	bindsym --release apostrophe move container to workspace $ws4 ; workspace $ws4
+	bindsym --release a move container to workspace $ws5 ; workspace $ws5
+	bindsym --release z move container to workspace $ws6 ; workspace $ws6
+	bindsym --release e move container to workspace $ws7 ; workspace $ws7
+	bindsym --release r move container to workspace $ws8 ; workspace $ws8
+
+#Same for the arrows keys :
+	bindsym Left	resize shrink width 10 px or 10 ppt
+	bindsym Down	resize grow height 10 px or 10 ppt
+	bindsym Up	resize shrink height 10 px or 10 ppt
+	bindsym Right	resize grow width 10 px or 10 ppt
+
+## Navigate next/previous workspace with the current window
+	bindsym --release Tab move container to workspace next ; workspace next
+	bindsym --release Shift+Tab move container to workspace prev ; workspace prev
+
+	bindsym Escape	mode "default"
+}
 
 # Exec :
 
