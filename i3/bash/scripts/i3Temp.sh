@@ -1,6 +1,6 @@
 #!/bin/sh
 
-var=$(sensors | awk '/^Tctl:/ {print $2}')
+var=$(sensors | awk '/^Tccd1:/ {print $2}')
 var=${var%\.*}
 var=${var#[+-]}
 
