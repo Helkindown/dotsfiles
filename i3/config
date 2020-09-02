@@ -203,13 +203,13 @@ mode "$alt_mode" {
 	bindsym --release e move container to workspace $ws7 ; workspace $ws7
 	bindsym --release r move container to workspace $ws8 ; workspace $ws8
 
-#Same for the arrows keys :
-	bindsym Left	resize shrink width 10 px or 10 ppt
-	bindsym Down	resize grow height 10 px or 10 ppt
-	bindsym Up	resize shrink height 10 px or 10 ppt
-	bindsym Right	resize grow width 10 px or 10 ppt
+# Same for the arrows keys :
+	bindsym Left	resize shrink width 1 px or 1 ppt
+	bindsym Down	resize grow height 1 px or 1 ppt
+	bindsym Up	resize shrink height 1 px or 1 ppt
+	bindsym Right	resize grow width 1 px or 1 ppt
 
-## Navigate next/previous workspace with the current window
+# Navigate next/previous workspace with the current window
 	bindsym --release Tab move container to workspace next ; workspace next
 	bindsym --release Shift+Tab move container to workspace prev ; workspace prev
 
