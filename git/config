@@ -1,6 +1,3 @@
-[user]
-	email = helkindown@protonmail.com
-	name = Helkindown
 [pull]
 	rebase = false
 [merge]
