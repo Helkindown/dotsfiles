@@ -60,11 +60,10 @@ fi
 
 # Link all the base dotfiles to either their base dir or
 # ~/.config/bash/
-ln -f "$BASEDIR/bash/aliases"		"$HOME/.config/bash"
+ln -f "$BASEDIR/bash/aliases" "$BASEDIR/bash/export" "$BASEDIR/bash/function" "$HOME/.config/bash"
 ln -f "$BASEDIR/bash/bashrc"		"$HOME/.bashrc"
-ln -f "$BASEDIR/bash/function"		"$HOME/.config/bash"
-ln -f "$BASEDIR/bash/profile"		"$HOME/.profile"
 ln -f "$BASEDIR/bash/inputrc"		"$HOME/.inputrc"
+ln -f "$BASEDIR/bash/profile"		"$HOME/.profile"
 
 
 # Change the directory where the vimrc will be, e.i. for nvim it's ~/.config/nvim/init.vim and for Vim it's ~/.vim/vimrc
