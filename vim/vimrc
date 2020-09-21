@@ -52,23 +52,6 @@ nmap <C-s> :%s/
 " Same thing for the visual mode
 vmap <C-s> :s/
 
-" Map à to 0 in normal, visual and movement waiting command mode
-map à 0
-
-" Makes moving around tabs more easy
-map ² gt
-map ~ gT
-" ~ is <Shift>-² in AZERTY keyboard, make moving between tabs really easy.
-
-" Map é to ~ in normal, visual and movement waiting command mode
-noremap é ~
-
-" Quick toggle between spell and nospell
-map µ :set spell!<CR>
-
-" Quick binding to use the macro stored in a
-map ù @a
-
 " Map to make arrow keys resize the windows
 map <Up>	:resize +5<CR>
 map <Down>	:resize -5<CR>
