@@ -2,4 +2,7 @@
 
 alias st='startx /bin/i3'
 
+PATH=$PATH:.
+
 source $HOME/.bashrc
+
