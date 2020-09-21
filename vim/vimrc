@@ -52,6 +52,10 @@ nmap <C-s> :%s/
 " Same thing for the visual mode
 vmap <C-s> :s/
 
+imap <C-l> <esc>
+map <C-l> <esc>
+cmap <C-l> <esc>
+
 " Map to make arrow keys resize the windows
 map <Up>	:resize +5<CR>
 map <Down>	:resize -5<CR>
