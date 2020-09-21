@@ -6,4 +6,4 @@ echo $bat
 bat=${bat%\%}
 
 echo $bat
-echo \#$(colorPicker FF0000 00FF00  $bat)
+echo \#$($HOME/bin/colorPicker FF0000 00FF00  $bat)

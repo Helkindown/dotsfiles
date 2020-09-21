@@ -6,4 +6,4 @@ var=${var#[+-]}
 
 echo $var°C
 echo $var
-echo \#$(colorPicker 00FF00 FF0000 $(($var * 5 - 150)))
+echo \#$($HOME/bin/colorPicker 00FF00 FF0000 $(($var * 5 - 150)))
