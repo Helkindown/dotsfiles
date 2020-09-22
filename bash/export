@@ -10,7 +10,4 @@ export HISTFILE=$HOME/.config/history
 export HISTFILESIZE= 
 export HISTSIZE= 
 
-
 export LESSHISTFILE=/dev/null
-
-export PATH=$PATH:.
