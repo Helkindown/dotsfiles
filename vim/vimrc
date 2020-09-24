@@ -7,7 +7,7 @@ filetype plugin on	" Used to determine what file type we edit
 set encoding=utf8	" Force utf-8 encoding
 set showcmd		" Show commands in the bottom right corner
 set autoread		" Reload automatically the file if it was changed outside of Vim
-set autowriteall	" Write automatically because I always forget to do it
+" set autowriteall	" Write automatically because I always forget to do it
 set autoindent		" Vim will auto indent text
 set smartindent
 set nohlsearch		" no highlight all the searched terms
