@@ -28,7 +28,7 @@ alias s='sudo'
 alias mount='sudo mount -v'
 alias umount='sudo umount -v'
 
-alias x='x-terminal-emulator -d "$(pwd)" & disown'
+alias x='termite -d "$(pwd)" & disown'
 
 alias ..='cd ..'
 alias :q='exit'
