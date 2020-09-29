@@ -57,10 +57,10 @@ map <C-l> <esc>
 cmap <C-l> <esc>
 
 " Map to make arrow keys resize the windows
-map <Up>	:resize +5<CR>
-map <Down>	:resize -5<CR>
-map <Left>	:vertical resize -5<CR>
-map <Right>	:vertical resize +5<CR>
+map <Up>	:resize +1<CR>
+map <Down>	:resize -1<CR>
+map <Left>	:vertical resize -1<CR>
+map <Right>	:vertical resize +1<CR>
 
 " Make moving around blocks of texts in visual line mode more convenient
 xnoremap K :move '<-2<CR>gv-gv
