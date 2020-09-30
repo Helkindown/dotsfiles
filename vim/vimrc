@@ -24,7 +24,7 @@ set scrolloff=5
 
 " Syntax coloring and theme
 syntax on
-colorscheme monokai
+colorscheme zenburn
 
 " show trailing characters
 set list
