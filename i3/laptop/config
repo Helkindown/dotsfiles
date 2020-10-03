@@ -68,6 +68,17 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8 - Media"
+set $ws9 "HDMI output"
+
+workspace $ws1 output eDP1
+workspace $ws2 output eDP1
+workspace $ws3 output eDP1
+workspace $ws4 output eDP1
+workspace $ws5 output eDP1
+workspace $ws6 output eDP1
+workspace $ws7 output eDP1
+workspace $ws8 output eDP1
+workspace $ws9 output HDMI1
 
 # switch to workspace
 bindsym --release $mod+ampersand workspace $ws1
@@ -78,6 +89,7 @@ bindsym --release $mod+a workspace $ws5
 bindsym --release $mod+z workspace $ws6
 bindsym --release $mod+e workspace $ws7
 bindsym --release $mod+r workspace $ws8
+bindsym --release $mod+( workspace $ws9
 
 # move focused container to workspace
 bindsym --release $mod+Shift+1 move container to workspace $ws1
@@ -88,6 +100,7 @@ bindsym --release $mod+Shift+A move container to workspace $ws5
 bindsym --release $mod+Shift+Z move container to workspace $ws6
 bindsym --release $mod+Shift+E move container to workspace $ws7
 bindsym --release $mod+Shift+R move container to workspace $ws8
+bindsym --release $mod+Shift+5 move container to workspace $ws9
 
 # reload the configuration file
 bindsym $mod+$ctrl+c reload
