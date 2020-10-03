@@ -3,4 +3,4 @@
 #Just the specifics for my laptop
 alias wifi="nmtui"
 
-alias HTMISetup='xrandr --output HDMI1 --auto --left-of eDP1'
+alias multiScreen='xrandr --output HDMI1 --auto --left-of eDP1'
