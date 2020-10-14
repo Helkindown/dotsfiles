@@ -42,8 +42,11 @@ set spelllang=en,fr
 " Set the default clipboard to "+
 set clipboard=unnamedplus
 
-" Status line :
-set laststatus=2	"Always show the status bar
+"" Status line :
+"set laststatus=2	"Always show the status bar
+
+" Move the working directory to where you last opened a file
+set autochdir 
 
 " Key bindings :
 
@@ -52,9 +55,9 @@ nmap <C-s> :%s/
 " Same thing for the visual mode
 vmap <C-s> :s/
 
-imap <C-l> <esc>
 map <C-l> <esc>
 cmap <C-l> <esc>
+imap <C-l> <esc>
 
 " Map to make arrow keys resize the windows
 map <Up>	:resize +1<CR>
@@ -63,5 +66,7 @@ map <Left>	:vertical resize -1<CR>
 map <Right>	:vertical resize +1<CR>
 
 " Make moving around blocks of texts in visual line mode more convenient
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
+xnoremap K :move '<-2<CR>gv
+xnoremap J :move '>+1<CR>gv
+
+map <C-t> :terminal<CR>:set nospell<CR>

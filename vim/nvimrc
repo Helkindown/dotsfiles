@@ -1,5 +1,5 @@
 " For neovim, remap Esc to exit terminal mode
-tnoremap è <C-\><C-n>
+tnoremap <C-l> <C-\><C-n>
 
 " Map à to 0 in normal, visual and movement waiting command mode
 map à 0
