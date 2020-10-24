@@ -89,7 +89,7 @@ bindsym --release $mod+a workspace $ws5
 bindsym --release $mod+z workspace $ws6
 bindsym --release $mod+e workspace $ws7
 bindsym --release $mod+r workspace $ws8
-bindsym --release $mod+( workspace $ws9
+bindsym --release $mod+less workspace $ws9
 
 # move focused container to workspace
 bindsym --release $mod+Shift+1 move container to workspace $ws1
@@ -100,7 +100,7 @@ bindsym --release $mod+Shift+A move container to workspace $ws5
 bindsym --release $mod+Shift+Z move container to workspace $ws6
 bindsym --release $mod+Shift+E move container to workspace $ws7
 bindsym --release $mod+Shift+R move container to workspace $ws8
-bindsym --release $mod+Shift+5 move container to workspace $ws9
+bindsym --release $mod+Shift+greater move container to workspace $ws9
 
 # reload the configuration file
 bindsym $mod+$ctrl+c reload
@@ -215,6 +215,7 @@ mode "$alt_mode" {
 	bindsym --release z move container to workspace $ws6 ; workspace $ws6
 	bindsym --release e move container to workspace $ws7 ; workspace $ws7
 	bindsym --release r move container to workspace $ws8 ; workspace $ws8
+	bindsym --release less move container to workspacec $ws9 : workspace $ws9
 
 # Same for the arrows keys :
 	bindsym Left	resize shrink width 1 px or 1 ppt
