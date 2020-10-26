@@ -19,12 +19,15 @@ set wildmenu		" Pretty file explorer
 " with a minimum scroll off of five lines
 set number
 set relativenumber	
-set cursorline
+"set cursorline
 set scrolloff=5
 
 " Syntax coloring and theme
 syntax on
 colorscheme monokai
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
 " show trailing characters
 set list
@@ -47,6 +50,9 @@ set clipboard=unnamedplus
 
 " Move the working directory to where you last opened a file
 set autochdir 
+
+" Set mouse support
+set mouse=a
 
 " Key bindings :
 
