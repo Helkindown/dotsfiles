@@ -2,7 +2,7 @@
 
 case $BLOCK_BUTTON in
 	1) 
-		pavucontrol &
+		pavucontrol
 esac
 
 tmp="$(amixer sget Master | awk '/^ *Front L/ {print $5 ":"  $6}')"

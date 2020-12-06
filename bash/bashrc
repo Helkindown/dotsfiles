@@ -23,3 +23,5 @@ for src in $(find $HOME/.config/bash/ -type f)
 do
 	source $src
 done
+
+export LD_LIBRARY_PATH=/home/cat/Work/lib
