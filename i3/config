@@ -69,6 +69,16 @@ set $ws6 "6 - Brésil"
 set $ws7 "7"
 set $ws8 "8 - Media"
 
+
+workspace $ws1 output DP-1
+workspace $ws2 output DP-1
+workspace $ws3 output DP-1
+workspace $ws4 output DP-1
+workspace $ws5 output HDMI-2
+workspace $ws6 output HDMI-2
+workspace $ws7 output HDMI-2
+workspace $ws8 output HDMI-2
+
 # switch to workspace
 bindsym --release $mod+ampersand workspace $ws1
 bindsym --release $mod+eacute workspace $ws2
@@ -219,7 +229,7 @@ mode "$alt_mode" {
 # Exec :
 
 ## Change the fps of the screen
-exec --no-startup-id xrandr -r 144
+xrandr --output DP-1 --right-of HDMI-2
 
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape
