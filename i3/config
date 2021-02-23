@@ -60,23 +60,23 @@ bindsym --release $mod+x [urgent=latest] focus
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Media"
+set $ws1 "1:1"
 set $ws2 "2:2"
 set $ws3 "3:3"
 set $ws4 "4:4"
-set $ws5 "5:Terminal"
-set $ws6 "6:Brésil"
-set $ws7 "7:BBB"
-set $ws8 "8:Communist Utopia"
+set $ws5 "5:A"
+set $ws6 "6:Z"
+set $ws7 "7:E"
+set $ws8 "8:R - Media"
 
-workspace $ws1 output HDMI-2
-workspace $ws2 output HDMI-2
-workspace $ws3 output HDMI-2
-workspace $ws4 output HDMI-2
-workspace $ws5 output DP-1
-workspace $ws6 output DP-1
-workspace $ws7 output DP-1
-workspace $ws8 output DP-1
+workspace $ws1 output DP-1
+workspace $ws2 output DP-1
+workspace $ws3 output DP-1
+workspace $ws4 output DP-1
+workspace $ws5 output HDMI-2
+workspace $ws6 output HDMI-2
+workspace $ws7 output HDMI-2
+workspace $ws8 output HDMI-2
 
 # switch to workspace
 bindsym --release $mod+ampersand workspace $ws1
@@ -173,13 +173,13 @@ bindsym --release $mod+space exec dmenu_run -i -b -fn hack -sb $purple
 bindsym --release $mod+q layout toggle tabbed split
 
 ## Takes screenshots, with a rectangle selection with the $mod
-bindsym --release $mod+Print exec --no-startup-id scrot ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
-bindsym --release $alt+Print exec --no-startup-id scrot -u ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
+bindsym --release $alt+Print exec --no-startup-id scrot ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
+bindsym --release $mod+Print exec --no-startup-id scrot -u ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
 bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/Screenshot/%Y-%m-%d_%H:%M_$wx$h.png
 
 ## Automatically moves the discord & jami to the most left workspace
-for_window [class="discord"] move container to workspace $ws1
-for_window [class="Jami-gnome"] move container to workspace $ws1
+for_window [class="discord"] move container to workspace $ws8
+for_window [class="Jami-gnome"] move container to workspace $ws8
 
 ## Automatically makes tor a windowed application
 for_window [class="Tor Browser"] floating enable
@@ -230,8 +230,7 @@ mode "$alt_mode" {
 # Exec :
 
 ## Change the fps of the screen
-exec xrandr --output DP-1 --right-of HDMI-2
-
+exec xrandr HDMI-2 --output --right-of DP-1
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape
 ## Change the repeat speed for key repeat

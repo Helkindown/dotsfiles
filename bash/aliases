@@ -23,7 +23,7 @@ alias rm='rm -v'
 alias rmdir='rmdir -v'
 alias rmrf='rm -vrf'
 
-alias s='sudo'
+alias s='sudo '
 
 alias mount='sudo mount -v'
 alias umount='sudo umount -v'
