@@ -60,25 +60,28 @@ bindsym --release $mod+x [urgent=latest] focus
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 - Terminal"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8 - Media"
-set $ws9 "HDMI output"
+set $ws1 "1:1 - Terminal"
+set $ws2 "2:2"
+set $ws3 "3:3"
+set $ws4 "4:4"
+set $ws5 "5:A"
+set $ws6 "6:Z"
+set $ws7 "7:E"
+set $ws8 "8:R - Media"
+set $ws9 "9:external output"
 
-workspace $ws1 output eDP1
-workspace $ws2 output eDP1
-workspace $ws3 output eDP1
-workspace $ws4 output eDP1
-workspace $ws5 output eDP1
-workspace $ws6 output eDP1
-workspace $ws7 output eDP1
-workspace $ws8 output eDP1
-workspace $ws9 output HDMI1
+set $in_screen "eDP1"
+set $out_screen "HDMI-1"
+
+workspace $ws1 output $in_screen
+workspace $ws2 output $in_screen
+workspace $ws3 output $in_screen
+workspace $ws4 output $in_screen
+workspace $ws5 output $in_screen
+workspace $ws6 output $in_screen
+workspace $ws7 output $in_screen
+workspace $ws8 output $in_screen
+workspace $ws9 output $out_screen
 
 # switch to workspace
 bindsym --release $mod+ampersand workspace $ws1
@@ -107,7 +110,7 @@ bindsym $mod+$ctrl+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+$ctrl+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+$ctrl+e exec i3-msg exit
+bindsym $mod+$ctrl+e exec --no-startup-id i3-msg exit
 
 # Resize stuff :
 bindsym $mod+y		resize shrink width 1 px or 1 ppt
@@ -170,7 +173,7 @@ bindsym --release $mod+w kill
 bindsym --release $mod+Shift+M exec --no-startup-id $wallpaper
 
 ## Launch program launcher, dmenu
-bindsym --release $mod+space exec dmenu_run -i -b -fn hack -sb $purple
+bindsym --release $mod+space exec --no-startup-id dmenu_run -i -b -fn hack -sb $purple
 ### If dmenu don't show any programs, just delete either ~/.dmenu_cache or ~/.cache/dmenu_run
 
 ## Window Layout Mode
@@ -190,6 +193,7 @@ for_window [class="Tor Browser"] floating enable
 # Start i3blocks to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	strip_workspace_numbers yes
 	font pango:outlined-iconset, hack 9
 	bindsym button4 nop
 	bindsym button5 nop
@@ -232,8 +236,8 @@ mode "$alt_mode" {
 
 # Exec :
 
-### Change the fps of the screen
-#exec --no-startup-id xrandr -r 144
+## Layout of the screens
+exec --no-startup-id xrandr $in_screen --output --right-of $out_screen
 
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape

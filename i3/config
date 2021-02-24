@@ -60,7 +60,7 @@ bindsym --release $mod+x [urgent=latest] focus
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:1"
+set $ws1 "1:1 - Terminal"
 set $ws2 "2:2"
 set $ws3 "3:3"
 set $ws4 "4:4"
@@ -68,15 +68,20 @@ set $ws5 "5:A"
 set $ws6 "6:Z"
 set $ws7 "7:E"
 set $ws8 "8:R - Media"
+#set $ws9 "9:external output"
 
-workspace $ws1 output DP-1
-workspace $ws2 output DP-1
-workspace $ws3 output DP-1
-workspace $ws4 output DP-1
-workspace $ws5 output HDMI-2
-workspace $ws6 output HDMI-2
-workspace $ws7 output HDMI-2
-workspace $ws8 output HDMI-2
+set $l_screen "DP-1"
+set $r_screen "HDMI-1"
+
+workspace $ws1 output $l_screen
+workspace $ws2 output $l_screen
+workspace $ws3 output $l_screen
+workspace $ws4 output $l_screen
+workspace $ws5 output $r_screen
+workspace $ws6 output $r_screen
+workspace $ws7 output $r_screen
+workspace $ws8 output $r_screen
+#workspace $ws9 output $r_screen
 
 # switch to workspace
 bindsym --release $mod+ampersand workspace $ws1
@@ -87,6 +92,7 @@ bindsym --release $mod+a workspace $ws5
 bindsym --release $mod+z workspace $ws6
 bindsym --release $mod+e workspace $ws7
 bindsym --release $mod+r workspace $ws8
+#bindsym --release $mod+less workspace $ws9
 
 # move focused container to workspace
 bindsym --release $mod+Shift+1 move container to workspace $ws1
@@ -97,13 +103,14 @@ bindsym --release $mod+Shift+A move container to workspace $ws5
 bindsym --release $mod+Shift+Z move container to workspace $ws6
 bindsym --release $mod+Shift+E move container to workspace $ws7
 bindsym --release $mod+Shift+R move container to workspace $ws8
+#bindsym --release $mod+Shift+greater move container to workspace $ws9
 
 # reload the configuration file
 bindsym $mod+$ctrl+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+$ctrl+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+$ctrl+e exec i3-msg exit
+bindsym $mod+$ctrl+e exec --no-startup-id i3-msg exit
 
 # Resize stuff :
 bindsym $mod+y		resize shrink width 1 px or 1 ppt
@@ -166,14 +173,13 @@ bindsym --release $mod+w kill
 bindsym --release $mod+Shift+M exec --no-startup-id $wallpaper
 
 ## Launch program launcher, dmenu
-bindsym --release $mod+space exec dmenu_run -i -b -fn hack -sb $purple
+bindsym --release $mod+space exec --no-startup-id dmenu_run -i -b -fn hack -sb $purple
 ### If dmenu don't show any programs, just delete either ~/.dmenu_cache or ~/.cache/dmenu_run
 
 ## Window Layout Mode
 bindsym --release $mod+q layout toggle tabbed split
 
 ## Takes screenshots, with a rectangle selection with the $mod
-bindsym --release $alt+Print exec --no-startup-id scrot ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
 bindsym --release $mod+Print exec --no-startup-id scrot -u ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
 bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/Screenshot/%Y-%m-%d_%H:%M_$wx$h.png
 
@@ -213,6 +219,7 @@ mode "$alt_mode" {
 	bindsym --release z move container to workspace $ws6 ; workspace $ws6
 	bindsym --release e move container to workspace $ws7 ; workspace $ws7
 	bindsym --release r move container to workspace $ws8 ; workspace $ws8
+	#bindsym --release less move container to workspacec $ws9 : workspace $ws9
 
 # Same for the arrows keys :
 	bindsym Left	resize shrink width 1 px or 1 ppt
@@ -229,8 +236,8 @@ mode "$alt_mode" {
 
 # Exec :
 
-## Change the fps of the screen
-exec xrandr HDMI-2 --output --right-of DP-1
+## Layout of the screens
+exec --no-startup-id xrandr HDMI-2 --output --right-of DP-1
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape
 ## Change the repeat speed for key repeat
