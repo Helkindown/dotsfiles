@@ -1,0 +1,44 @@
+{
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+
+    "keyboard.dispatch": "keyCode", // For my retarded use of Ver Maj as Esc
+    
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.replace": "block",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.easymotionDimBackground": false,
+    "vim.enableNeovim": true,
+    "vim.highlightedyank.enable": true,
+    "vim.neovimPath": "/usr/bin/nvim",
+    "vim.surround": false,
+    "vim.useSystemClipboard": true,
+
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
+
+    "workbench.colorTheme": "Monokai",
+    "window.zoomLevel": 1,
+
+    "editor.renderWhitespace": "trailing",
+    "editor.renderControlCharacters": true,
+    "terminal.external.linuxExec": "termite",
+    "todo-tree.tree.showScanModeButton": false,
+    "workbench.editorAssociations": [
+        {
+            "viewType": "default",
+            "filenamePattern": "git-rebase-todo"
+        }
+    ],
+    "editor.tabCompletion": "on",
+    "editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"workbench.editor.highlightModifiedTabs": true,
+	"workbench.editor.tabCloseButton": "off",
+	"typescript.npm": "/usr/bin/npm",
+	"php.validate.executablePath": "/usr/bin/php",
+	"diffEditor.ignoreTrimWhitespace": false,
+}
