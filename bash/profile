@@ -5,3 +5,6 @@ alias st='startx /bin/i3'
 PATH=$PATH:$HOME/bin:$HOME/.local/bin:.
 
 source $HOME/.bashrc
+
+# opam configuration for vscode
+[ -r /home/cat/.opam/opam-init/init.sh ] && . /home/cat/.opam/opam-init/init.sh > /dev/null 2> /dev/null || echo no opam detected.
