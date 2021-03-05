@@ -238,12 +238,10 @@ mode "$alt_mode" {
 
 ## Layout of the screens
 exec --no-startup-id xrandr $in_screen --output --right-of $out_screen
-
 ## Swap cap with escape
 exec --no-startup-id setxkbmap -layout fr -option caps:swapescape
 ## Change the repeat speed for key repeat
 exec --no-startup-id xset r rate 300 40
 
 exec --no-startup-id $wallpaper
-exec --no-startup-id picom
-
+exec --no-startup-id picom --experimental-backend -b
