@@ -11,3 +11,6 @@ export HISTFILESIZE=
 export HISTSIZE= 
 
 export LESSHISTFILE=/dev/null
+
+#For TP thread on the road
+#export LD_LIBRARY_PATH=/home/cat/Work/lib
