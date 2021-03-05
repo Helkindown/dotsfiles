@@ -1,10 +1,5 @@
 #!/bin/bash
 
-function vo {
-	tmp=$(find $1 -type f | fzf -m)
-	[ -n "$tmp" ] && $EDITOR -p $tmp
-}
-
 function agent {
 	eval $(ssh-agent)
 	ssh-add $1
@@ -15,16 +10,4 @@ function agent {
 	do
 		git $arg
 	done
-}
-
-function temporaire {
-	builtin cd $@
-
-	if [ "$(echo ${PWD} | sed 's/\/.*\///')" = "A a" ]
-	then
-		echo Ca marche
-		./menu
-	else
-		echo Ca marche pas
-	fi
 }
