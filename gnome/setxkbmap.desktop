@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=setxkbmap
+Comment=swap escape and caps
+Exec=/usr/bin/setxkbmap -option caps:swapescape
+Terminal=false
+Type=Application

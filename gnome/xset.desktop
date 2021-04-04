@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=xset
+Comment=Change the rate of key repeats
+Exec=/usr/bin/xset r rate 300 40
+Terminal=false
+Type=Application
