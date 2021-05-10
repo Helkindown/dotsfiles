@@ -71,7 +71,7 @@ set $ws8 "8:R - Media"
 #set $ws9 "9:external output"
 
 set $l_screen "DP-1"
-set $r_screen "HDMI-2"
+set $r_screen "DVI-D-1"
 
 workspace $ws1 output $l_screen
 workspace $ws2 output $l_screen
@@ -173,7 +173,7 @@ bindsym --release $mod+w kill
 bindsym --release $mod+Shift+M exec --no-startup-id $wallpaper
 
 ## Launch program launcher, dmenu
-bindsym --release $mod+space exec --no-startup-id dmenu_run -i -b -fn hack -sb $purple
+bindsym --release $mod+space exec --no-startup-id dmenu_run -i -fn hack -sb $purple
 ### If dmenu don't show any programs, just delete either ~/.dmenu_cache or ~/.cache/dmenu_run
 
 ## Window Layout Mode
@@ -198,6 +198,7 @@ bar {
     bindsym button4 nop
     bindsym button5 nop
     status_command i3blocks
+    position top
     colors {
                 #	BORDER		BACKGROUND	TEXT
         focused_workspace  	$light_purple	$purple		$text
