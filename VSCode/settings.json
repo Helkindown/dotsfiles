@@ -30,10 +30,10 @@
 	],
 	"editor.tabCompletion": "on",
 	"editor.insertSpaces": false,
-	"editor.detectIndentation": false,
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.tabCloseButton": "off",
 	"typescript.npm": "/usr/bin/npm",
 	"php.validate.executablePath": "/usr/bin/php",
-	"diffEditor.ignoreTrimWhitespace": false
+	"diffEditor.ignoreTrimWhitespace": false,
+	"python.analysis.logLevel": "Trace"
 }
