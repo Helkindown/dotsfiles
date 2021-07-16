@@ -181,7 +181,7 @@ bindsym --release $mod+q layout toggle tabbed split
 
 ## Takes screenshots, with a rectangle selection with the $mod
 bindsym --release $mod+Print exec --no-startup-id scrot -u ~/Pictures/Screenshot/%Y-%m-%d_%H:%M.png
-bindsym --release Print exec --no-startup-id scrot -s ~/Pictures/Screenshot/%Y-%m-%d_%H:%M_\$wx\$h.png
+bindsym --release Print exec --no-startup-id flameshot gui
 
 ## Automatically moves the discord & jami to the last workplace
 for_window [class="discord"] move container to workspace $ws8
@@ -246,3 +246,5 @@ exec --no-startup-id xset r rate 300 40
 
 exec --no-startup-id $wallpaper
 exec --no-startup-id picom --experimental-backend -b
+
+exec --no-startup-id flameshot
